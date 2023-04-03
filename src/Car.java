@@ -17,4 +17,48 @@ public class Car {
     public String getMake() {
         return this.make;
     }
+
+    public String getRegNo() {
+        return regNo;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public String getDriverName() {
+        return driverName;
+    }
+
+    public int getPassengerCapacity() {
+        return passengerCapacity;
+    }
+
+    public boolean isAvailable() {
+        return available;
+    }
+
+    public void setRegNo(String regNo) {
+        this.regNo = regNo;
+    }
+
+    public void setMake(String make) {
+        this.make = make;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    public void setDriverName(String driverName) {
+        this.driverName = driverName;
+    }
+
+    public void setPassengerCapacity(int passengerCapacity) {
+        this.passengerCapacity = passengerCapacity;
+    }
+
+    public void setAvailable(boolean available) {
+        this.available = available;
+    }
 }

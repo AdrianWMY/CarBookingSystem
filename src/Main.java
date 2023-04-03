@@ -15,6 +15,16 @@ public class Main {
                     break;
                 case "BC":
                     break;
+                case "CB":
+                    break;
+                case "DA":
+                    break;
+                case "SS":
+                    break;
+                case "SA":
+                    break;
+                case "SD":
+                    break;
                 case "EX":
                     System.out.println("see you next time");
                     System.exit(1);

@@ -11,6 +11,29 @@ public class Menu {
         System.out.println("Search Available Cars     SA");
         System.out.println("Seed Data                 SD");
         System.out.println("Exit Program              EX");
+    }
+
+    public void createCar() {
+
+    }
+
+    public void bookCar() {
+
+    }
+
+    public void CompleteBooking() {
+
+    }
+
+    public void displayAllCar() {
+
+    }
+
+    public void searchCars() {
+
+    }
+
+    public void seedData() {
 
     }
 }

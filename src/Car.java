@@ -61,4 +61,26 @@ public class Car {
     public void setAvailable(boolean available) {
         this.available = available;
     }
+
+    public boolean book(String firstName, String lastName, DateTime required, int numPassengers) {
+
+        return false;
+    }
+
+    public String getDetails() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(String.format("%-15s %s\n", "RegNo:", this.regNo));
+        sb.append(String.format("%-15s %s\n", "Make & Model:", this.make + " " + this.model));
+        sb.append(String.format("%-15s %s\n", "Driver Name:", this.driverName));
+        sb.append(String.format("%-15s %s\n", "Capacity:", this.passengerCapacity));
+        sb.append(String.format("%-15s %s\n", "Available:", this.available));
+
+        return sb.toString();
+    }
+
+    @Override
+    public String toString() {
+        return regNo + ":" + make + ":" + model + ":" + driverName
+                + ":" + passengerCapacity + ":" + (available && true ? "YES" : "NO");
+    }
 }

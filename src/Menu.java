@@ -1,4 +1,44 @@
+import java.util.Scanner;
+
 public class Menu {
+
+    private Scanner scanner;
+    private MiRidesApplication miRidesApp;
+
+    public Menu(Scanner scanner) {
+        this.scanner = scanner;
+        this.miRidesApp = new MiRidesApplication();
+    }
+
+    public void run() {
+        while (true) {
+            printMenu();
+            String input = scanner.nextLine();
+            switch (input.toUpperCase()) {
+                case "CC":
+                    createCar();
+                    break;
+                case "BC":
+                    break;
+                case "CB":
+                    break;
+                case "DA":
+                    break;
+                case "SS":
+                    break;
+                case "SA":
+                    break;
+                case "SD":
+                    break;
+                case "EX":
+                    System.out.println("See you next time");
+                    System.exit(1);
+                default:
+                    System.out.println("Your input is not valid");
+
+            }
+        }
+    }
 
     public void printMenu() {
         System.out.println("*** MiRides system Menu ***\n");
@@ -14,6 +54,22 @@ public class Menu {
     }
 
     public void createCar() {
+        String regNo;
+        String make;
+        String model;
+        String driverName;
+        int passengerCapacity;
+        System.out.println("Enter Registration No:");
+        regNo = scanner.nextLine();
+        System.out.println("Enter Make:");
+        make = scanner.nextLine();
+        System.out.println("Enter Model:");
+        model = scanner.nextLine();
+        System.out.println("Enter Driver's Name:");
+        driverName = scanner.nextLine();
+        System.out.println("Enter Passenger Capacity:");
+        passengerCapacity = Integer.parseInt(scanner.nextLine());
+        System.out.println(miRidesApp.createCar(new Car(regNo, make, model, driverName, passengerCapacity)));
 
     }
 

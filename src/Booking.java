@@ -86,4 +86,19 @@ public class Booking {
         return car;
     }
 
+    public String getDetials() {
+
+        StringBuilder sb = new StringBuilder();
+        sb.append(String.format("%-15s %s\n", "id:", this.id));
+        sb.append(String.format("%-15s %s\n", "Booking Fee:", this.bookingFee));
+        sb.append(String.format("%-15s %s\n", "Pick Up Date:", this.pickUpDateTime));
+        sb.append(String.format("%-15s %s\n", "Name:", this.firstName + " " + this.lastName));
+        sb.append(String.format("%-15s %s\n", "Passengers:", this.numPassengers));
+        sb.append(String.format("%-15s %s\n", "Travelled:", this.kilometersTravelled));
+        sb.append(String.format("%-15s %s\n", "Trip Fee:", this.tripFee));
+        sb.append(String.format("%-15s %s\n", "Car Id:", this.car.getRegNo()));
+
+        return sb.toString();
+    }
+
 }

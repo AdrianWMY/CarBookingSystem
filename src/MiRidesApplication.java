@@ -1,3 +1,4 @@
+import java.io.DataInput;
 
 public class MiRidesApplication {
 
@@ -26,7 +27,35 @@ public class MiRidesApplication {
         this.cars = newCars;
     }
 
-    public void bookCar() {
+    public String bookCar(String date) {
+
+        String result = "";
+        if (!date.contains("/")) {
+            result = "Your input is not vaild";
+        } else {
+
+            String[] dateArray = date.split("/");
+            DateTime dateTime = new DateTime(Integer.parseInt(dateArray[0]), Integer.parseInt(dateArray[1]),
+                    Integer.parseInt(dateArray[2]));
+            DateTime currenDateTime = new DateTime();
+            if (DateTime.diffDays(dateTime, currenDateTime) >= 0) {
+                result = "The following cars are available : \n";
+                for (int i = 0; i < cars.length; i++) {
+                    result += i + 1 + ". " + cars[i].getRegNo() + "\n";
+                }
+            } else {
+                result = "No cars available";
+            }
+
+        }
+
+        // if (dateTime.) {
+        // result = "Error - No cars are available on this date";
+        // } else {
+        // result = "Error - No cars are available on this date";
+        // }
+
+        return result;
 
     }
 

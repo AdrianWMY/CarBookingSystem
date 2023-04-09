@@ -2,11 +2,11 @@ import java.util.Scanner;
 
 public class Menu {
 
-    private Scanner scanner;
+    private Scanner scanner = new Scanner(System.in);
+
     private MiRidesApplication miRidesApp;
 
-    public Menu(Scanner scanner) {
-        this.scanner = scanner;
+    public Menu() {
         this.miRidesApp = new MiRidesApplication();
     }
 
@@ -19,6 +19,7 @@ public class Menu {
                     createCar();
                     break;
                 case "BC":
+                    bookCar();
                     break;
                 case "CB":
                     break;
@@ -74,6 +75,10 @@ public class Menu {
     }
 
     public void bookCar() {
+        String date;
+        System.out.println("Enter Date Required: ");
+        date = scanner.nextLine();
+        System.out.println(miRidesApp.bookCar(date));
 
     }
 
